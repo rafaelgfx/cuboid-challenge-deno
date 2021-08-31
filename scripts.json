@@ -1,0 +1,59 @@
+{
+  "scripts": {
+    "install": {
+      "cmd": "deno install -n cotton -f https://deno.land/x/cotton@v0.7.5/cli.ts",
+      "allow": [
+        "net",
+        "read",
+        "write"
+      ],
+      "watch": false
+    },
+    "start": {
+      "cmd": "deno run mod.ts",
+      "importmap": "import-map.json",
+      "allow": [
+        "net",
+        "read",
+        "write"
+      ]
+    },
+    "test": {
+      "cmd": "deno test",
+      "importmap": "import-map.json",
+      "allow": [
+        "env",
+        "net",
+        "read",
+        "write"
+      ]
+    },
+    "migration:up": {
+      "cmd": "deno run https://deno.land/x/cotton@v0.7.5/cli.ts migration:up",
+      "allow": [
+        "net",
+        "read",
+        "write"
+      ],
+      "watch": false
+    },
+    "migration:down": {
+      "cmd": "deno run https://deno.land/x/cotton@v0.7.5/cli.ts migration:down",
+      "allow": [
+        "net",
+        "read",
+        "write"
+      ],
+      "watch": false
+    },
+    "migration:create": {
+      "cmd": "deno run https://deno.land/x/cotton@v0.7.5/cli.ts migration:create --name",
+      "allow": [
+        "net",
+        "read",
+        "write"
+      ],
+      "watch": false
+    }
+  }
+}
